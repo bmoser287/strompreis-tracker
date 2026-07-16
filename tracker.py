@@ -1,8 +1,11 @@
 import os
 import random
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import matplotlib.pyplot as plt
 import pandas as pd
+
+deutsche_zeitzone = timezone(timedelta(hours=2))
+jetzt = datetime.now(deutsche_zeitzone).strftime("%Y-%m-%d %H:%M")
 
 CSV_FILE = "strompreise.csv"
 IMG_FILE = "strompreis_chart.png"
